@@ -25,8 +25,17 @@ let title = 'About Eliseʻs Astro Site';
 </style>
 
 <BaseLayout title={title}>
+    <main>
+        <h2>Elise has made a custom starter!</h2>
 
-        <Tour />
+        <p>This builds upon the starter (generic) that comes with <code>astro init</code> and adds:</p>
+        <ul>
+            <li>A base layout with the basic page structure</li>
+            <li>A base head with all the minimal required head elements</li>
+            <li>A title prop that can be set on any page and has a default that can be set in the base layout</li>
+        </ul>
+    </main>
+    <Tour />
 
         <!--
            - You can also use imported framework components directly in your markup!
