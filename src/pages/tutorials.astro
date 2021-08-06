@@ -1,7 +1,27 @@
 ---
+import { Markdown } from 'astro/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
+<style>
+    main {
+        min-height: 100vh;
+        max-width: 70ch;
+    }
+
+    h1, h2 {
+        margin: 0.8em 0;
+    }
+</style>
+
 <BaseLayout>
-    <h1>Astro Tutorials</h1>
+    <main>
+        <h1>Astro Tutorials</h1>
+        <section class="intro">
+            <h2>Introduction</h2>
+            <Markdown>
+            On this page you will find at least one tutorial to help you get started with Astro. More will be added over time.
+            </Markdown>
+        </section>
+    </main>
 </BaseLayout>
