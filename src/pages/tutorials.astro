@@ -50,6 +50,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             `$ npm install`
 
             After that has finished you can open your project in your favourite code editor and check out the files and directories you've been given. There is a more in-depth explanation of all these in the [Basics section of the Astro docs](https://docs.astro.build/core-concepts/project-structure).
+
+            ## Modularity
+
+            One of the big advantages of using a static site generator (SSG) is that, unlike using plain HTML, you can make your code DRY and modular. This means you can reuse common aspects across multiple pages, e.g. navigation, without copy-paste and unmaintainable code.
+
+            You can already see this in action in the starter code in `src/pages/index.astro` where there is an import at the top of the file (in the [front matter](https://docs.astro.build/core-concepts/astro-components#frontmatter-script)) and further down in the markup there is a custom tag `<Tour />`. All that's doing is grabbing the contents of the file being imported at the top, and sticking it in where that tag is. That's called a [component](https://docs.astro.build/core-concepts/astro-components) and we can do pretty much anything we like with that system.
+
+            
             </Markdown>
         </article>
     </main>
