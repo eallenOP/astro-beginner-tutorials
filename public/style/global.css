@@ -48,12 +48,12 @@ code {
 
 pre {
   padding: 1em;
-  background-color: #384252;
+  background-color: #111827;
   border-radius: 5px;
 }
 
 pre > code {
   padding: 0;
-  background-color: #384252;
+  background-color: #111827;
   color: #ddd;
 }
