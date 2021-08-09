@@ -136,6 +136,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             ```
 
             Note that the custom attribute (the prop) that we added to our base layout tag is called `title` because that's what we told the layout file to expect.
+
+            Now, for the sake of reusability, we should really move the title into a variable in the front matter. That way we can use it in the title tag but we could also reuse it in the page heading. So instead of having "My About Page" as the value passed straight into the prop, we will move that string into a `title` variable and then call the variable as the value of the prop. Here's what the `about.astro` file will look like now (I added arbitrary content).
+
+            ```js
+            ---
+            import BaseLayout from '../layouts/BaseLayout.astro';
+            let title = "My About Page"
+            ---
+
+            <BaseLayout title={ title }>
+                <h1>This is my about page</h1>
+                <p>It has a short paragraph.</p>
+            </BaseLayout>
+            ```
+
+            If you have a look at the `index.astro` file that came with the Starter Kit (Generic) then you'll see a title variable defined in front matter being used in the title tag further down the page. Why not convert this page to use your base layout as well? 
             </Markdown>
         </article>
     </main>
