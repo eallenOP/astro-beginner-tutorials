@@ -109,7 +109,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             One thing we might want to do is allow each of our pages to have their own title in the browser tab. But how do we do that when our head section is brought in from the layout file?
 
-            Each of our content files can save it's title in a variable and then pass it as a property to the layout file. This is shortened to [props](https://docs.astro.build/core-concepts/astro-components#component-props) and is a common feature of component-based frameworks. It means we can reuse a bit of modular code (a [component](https://docs.astro.build/core-concepts/astro-components)) but change specific aspects each time.
+            Each of our content files can save its title in a variable and then pass it as a property to the layout file. This is shortened to [props](https://docs.astro.build/core-concepts/astro-components#component-props) and is a common feature of component-based frameworks. It means we can reuse a bit of modular code (a [component](https://docs.astro.build/core-concepts/astro-components)) but change specific aspects each time.
 
             First, your layout component needs to know that it can accept a title prop to be passed to it. This is defined in the front matter in `BaseLayout.astro` like so:
 
@@ -131,7 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             ```js
             <BaseLayout title="My About Page">
-                (Content here)
+                (Page content here)
             </BaseLayout>
             ```
 
