@@ -38,3 +38,10 @@ p {
 img {
   max-width: 100%;
 }
+
+code, pre {
+  background-color: #ddd;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 90%;
+}
