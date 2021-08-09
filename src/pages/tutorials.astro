@@ -51,6 +51,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             After that has finished you can open your project in your favourite code editor and check out the files and directories you've been given. There is a more in-depth explanation of all these in the [Basics section of the Astro docs](https://docs.astro.build/core-concepts/project-structure).
 
+            Now run `$ npm start` and [visit your site](http://localhost:3000/) in a browser to see what you've got. 
+
             ## Modularity
 
             One of the big advantages of using a static site generator (SSG) is that, unlike using plain HTML, you can make your code DRY and modular. This means you can reuse common aspects across multiple pages, e.g. navigation, without copy-paste and unmaintainable code.
@@ -97,7 +99,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             ```
 
-            
+            One more step: you need to wrap your content in `<BaseLayout></BaseLayout>` tags. So your final about page file should have front matter at the top to import the layout, then after the front matter comes the opening base layout tag, then your choice of plain old HTML content, then the closing base layout tag and that's it!
+
+            Check in your terminal to see that the server is still running (if not, run `$ npm start` again) and visit [http://localhost:3000/about](http://localhost:3000/about) to check that it's all working.
+
+            > The styling is likely to be a bit odd because of the stylesheet that came with your Starter Kit (Generic) but you should see your nav and your content and if you inspect the page you should also see the full page structure brought in from the layout file.
             </Markdown>
         </article>
     </main>
