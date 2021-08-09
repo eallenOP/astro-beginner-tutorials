@@ -104,6 +104,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Check in your terminal to see that the server is still running (if not, run `$ npm start` again) and visit [http://localhost:3000/about](http://localhost:3000/about) to check that it's all working.
 
             > The styling is likely to be a bit odd because of the stylesheet that came with your Starter Kit (Generic) but you should see your nav and your content and if you inspect the page you should also see the full page structure brought in from the layout file.
+
+            ### Variables
+
+            One thing we might want to do is allow each of our pages to have their own title in the browser tab. But how do we do that when our head section is brought in from the layout file?
+
+            Each of our content files can save it's title in a variable and then pass it as a property to the layout file. This is shortened to [props](https://docs.astro.build/core-concepts/astro-components#component-props) and is a common feature of component-based frameworks. It means we can reuse a bit of modular code (a [component](https://docs.astro.build/core-concepts/astro-components)) but change specific aspects each time.
+
+            First, your layout component needs to know that it can accept a title prop to be passed to it. This is defined in the front matter in `BaseLayout.astro` like so:
+
+            ```js
+            ---
+            const { title } = Astro.props;
+            ---
+            ```
+
+            What this says to our layout is that there will be a variable available called `title` and its contents will come from an attribute set whenever the `<BaseLayout>` tag is used.
+
+            Find the title tag in the head section of your base layout and replace the contents with the variable like so:
+
+            ```js
+            <title>{ title }</title>
+            ```
+
+            Now go to your about page and find the base layout tags. Pass in the prop (add in an attribute) like so:
+
+            ```js
+            <BaseLayout title="My About Page">
+                (Content here)
+            </BaseLayout>
+            ```
+
+            Note that the custom attribute (the prop) that we added to our base layout tag is called `title` because that's what we told the layout file to expect.
             </Markdown>
         </article>
     </main>
