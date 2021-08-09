@@ -39,9 +39,21 @@ img {
   max-width: 100%;
 }
 
-code, pre {
+code {
   background-color: #ddd;
   padding: 4px;
   border-radius: 4px;
   font-size: 90%;
+}
+
+pre {
+  padding: 1em;
+  background-color: #384252;
+  border-radius: 5px;
+}
+
+pre > code {
+  padding: 0;
+  background-color: #384252;
+  color: #ddd;
 }

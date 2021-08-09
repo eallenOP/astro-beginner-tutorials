@@ -31,11 +31,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             First create a new directory for your project—this will be the root directory so you should name it something sensible like the name of your project. You will need a bash shell or similar working in this directory. Example below (after this we will indicate bash commands just using the command prompt `$`, which you obviously don't type)
 
-            <pre>
+            ```
             ~ $ mkdir my-project
             ~ $ cd my-project
             my-project $
-            </pre>
+            ```
 
             Next we will start the Astro install wizard as described on the [Astro docs](https://docs.astro.build/installation), where they also give more detailed opetions. We just want the simple version, so in your terminal window use the following command and then read the output:
 
@@ -71,16 +71,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             Now add front matter to your file to make it a proper Astro file. That means adding the following right at the top, above the doctype:
 
-            <pre>
+            ```
             ---
 
             ---
 
-            </pre>
+            ```
 
             That's three hyphens (dashes) followed by a blank line followed by three more hyphens and another blank line.
 
+            Ok, we have a layout that we can reuse on multiple pages. But how do we get the content in there?
 
+            First, we indicate where the content will be inserted uing the `<slot />` tag. Just bung it in the body, after the nav.
+
+            Next, we need to make a content page of course, and we will tell it to use our nifty new layout. Create a new file for the about page, in the directory structure as follows:
+
+            `src/pages/about.astro`
+
+            Give it front matter and tell it to use our base layout at the very top of the file like this:
+            
+            ```js
+            ---
+            import BaseLayout from '../layouts/BaseLayout.astro';
+            ---
+
+            ```
+
+            
             </Markdown>
         </article>
     </main>
