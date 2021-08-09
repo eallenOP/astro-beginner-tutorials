@@ -57,7 +57,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             You can already see this in action in the starter code in `src/pages/index.astro` where there is an import at the top of the file (in the [front matter](https://docs.astro.build/core-concepts/astro-components#frontmatter-script)) and further down in the markup there is a custom tag `<Tour />`. All that's doing is grabbing the contents of the file being imported at the top, and sticking it in where that tag is. That's called a [component](https://docs.astro.build/core-concepts/astro-components) and we can do pretty much anything we like with that system.
 
-            
+            ### Layouts
+
+            One aspect that most SSGs have in common is the ability to create templates for the various kinds of page in your site. That way you can reuse all the surrounding stuff and just add different content each time. They're usually called page layouts, and we're going to make a default one for our site now.
+
+            Create a `layouts` directory inside your `src` directory and make a file in there called `BaseLayout.astro`. So now you should have:
+
+            `src/layouts/BaseLayout.astro`
+
+            Make sure you observe case sensitivity as it matters in an Astro project's file names.
+
+            In that new BaseLayout file, create a normal HTML page with all the usual parts, including the doctype, html tags, head and body. In the head section make sure you have all the modern meta tags, the title tag and a stylesheet link (which you can borrow from index.astro). In the body section add in a nav section with a couple of placeholder linnks for good measure.
+
+            Now add front matter to your file to make it a proper Astro file. That means adding the following right at the top, above the doctype:
+
+            <pre>
+            ---
+
+            ---
+
+            </pre>
+
+            That's three hyphens (dashes) followed by a blank line followed by three more hyphens and another blank line.
+
+
             </Markdown>
         </article>
     </main>
