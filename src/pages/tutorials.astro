@@ -26,7 +26,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </Markdown>
         </article>
         <article>
+            <Markdown>
+            ## Set up an Astro project
 
+            First create a new directory for your project—this will be the root directory so you should name it something sensible like the name of your project. You will need a bash shell or similar working in this directory. Example below (after this we will indicate bash commands just using the command prompt `$`)
+
+            ```
+            ~ $ mkdir my-project
+            ~ $ cd my-project
+            my-project $
+            ```
+
+            Next we will start the Astro install wizard as described on the [Astro docs](https://docs.astro.build/installation), where they also give more detailed opetions. We just want the simple version, so in your terminal window use the following command and then read the output:
+
+            `npm init astro`
+
+            You should be told that an instance of Astro is being built for you, and asked to pick a framework and a starter template. We do not want to select any framework (just leave them all unselected and press enter) and we want to pick the generic starter template to generate the minimum of starter code.
+
+            Once your Astro project is initialised, you need to install the dependencies by running
+
+            `npm install`
+            
+            After that has finished you can open your project in your favourite code editor and check out the files and directories you've been given. There is a more in-depth explanation of all these in the [Basics section of the Astro docs](https://docs.astro.build/core-concepts/project-structure).
+            </Markdown>
         </article>
     </main>
 </BaseLayout>
