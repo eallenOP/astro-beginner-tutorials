@@ -152,6 +152,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             ```
 
             If you have a look at the `index.astro` file that came with the Starter Kit (Generic) then you'll see a title variable defined in front matter being used in the title tag further down the page. Why not convert this page to use your base layout as well? 
+
+            ## Next steps
+
+            You've now got Astro up and running and built a component that can accept a prop (your layout template). Where to next?
+
+            You'll want to investigate how to make a non-layout component as well so why not try extracting your navigation section into its own component? Then you can add it to any page or layout just by importing it and placing the tag where you want it.
+
+            Another common part of the page to make into a component is the `<head>` section, with different variations possible for different purposes. Start with making a base head component and importing it into your base layout.
+
+            Can you introduce a sidebar navigation that will appear on only some pages in your site? Perhaps a new layout component would help with that. How about making a blog page so you can add post content and automatically generate a list of available posts. Check out the [examples provided by Astro](https://github.com/snowpackjs/astro/tree/main/examples) for some ideas.
             </Markdown>
         </article>
     </main>
